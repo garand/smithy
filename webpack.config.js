@@ -15,13 +15,32 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
-    contentBase: './app/dist',
   },
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader'
+          },
+        ],
       },
     ],
   },
