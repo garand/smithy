@@ -1,0 +1,20 @@
+{
+  "name": "smithy",
+  "version": "1.0.0",
+  "author": "Anthony Garand <garand@garand.me> (https://garand.me)",
+  "description": "Template for new projects",
+  "repository": "github:garand/smithy",
+  "license": "ISC",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  }
+}
