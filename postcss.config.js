@@ -1,8 +1,8 @@
 module.exports = {
   plugins: {
     'postcss-import': {
-      root: './'
+      root: './',
     },
     'postcss-preset-env': {stage: 0},
-  }
+  },
 }

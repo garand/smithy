@@ -8,13 +8,14 @@ module.exports = {
     index: [
       './app/src/index.js',
       './app/src/index.css',
-    ]
+    ],
   },
   output: {
-    path: path.resolve(__dirname, './app/dist')
+    path: path.resolve(__dirname, './app/dist'),
   },
   devServer: {
     host: '0.0.0.0',
+    disableHostCheck: true,
   },
   module: {
     rules: [
@@ -24,21 +25,21 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
           },
           {
-            loader: 'postcss-loader'
+            loader: 'postcss-loader',
           },
         ],
       },
@@ -46,7 +47,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './app/src/index.html'
+      template: './app/src/index.html',
     }),
     new MiniCssExtractPlugin(),
   ],
