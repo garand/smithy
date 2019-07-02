@@ -1,3 +1,3 @@
-# Smithy
+# Forge
 
 Template for new projects

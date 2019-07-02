@@ -1,9 +1,9 @@
 {
-  "name": "smithy",
+  "name": "forge",
   "version": "1.0.0",
   "author": "Anthony Garand <garand@garand.me> (https://garand.me)",
   "description": "Template for new projects",
-  "repository": "github:garand/smithy",
+  "repository": "github:garand/forge",
   "license": "ISC",
   "scripts": {
     "start": "webpack-dev-server",
